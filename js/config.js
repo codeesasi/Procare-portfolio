@@ -10,7 +10,7 @@
  * List of page identifiers used for navigation and content loading.
  * @constant {string[]}
  */
-const PAGES = Object.freeze(['home', 'about', 'services', 'faq', 'team', 'contact', 'products']);
+const PAGES = Object.freeze(['home', 'about', 'services', 'team', 'gallery', 'contact', 'faq', 'products']);
 
 /**
  * Application configuration constants.
@@ -105,6 +105,22 @@ const FALLBACK_CONTENT = Object.freeze({
             <div class="team-card"><div class="team-img"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Doctor"></div><div class="team-info"><h4>Dr. U. Senthilrajan (PT)</h4><span>Founder & Lead Physiotherapist</span></div></div>
             <div class="team-card"><div class="team-img"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Doctor"></div><div class="team-info"><h4>Dr. Muruga Venkatesh</h4><span>Medical Officer</span></div></div>
             <div class="team-card"><div class="team-img"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Doctor"></div><div class="team-info"><h4>Mrs. Nandhini. C</h4><span>Staff Nurse (13 Years)</span></div></div>
+        </div>
+    </div>`,
+
+    gallery: `<div class="slide-content centered">
+        <span class="tag">Our Space</span>
+        <h2 class="title centered">Clinic <span>Gallery</span></h2>
+        <p class="subtitle centered">A glimpse inside our modern physiotherapy and rehabilitation centre.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="Gallery/image_1.webp" alt="Spacious Clinical Rehabilitation Space"></div>
+            <div class="gallery-item"><img src="Gallery/image_2.webp" alt="Advanced Physiotherapy Treatment Beds"></div>
+            <div class="gallery-item"><img src="Gallery/image_3.webp" alt="Modern Therapeutic Equipment Station"></div>
+            <div class="gallery-item"><img src="Gallery/image_4.webp" alt="Therapist Consultation & Assessment Desk"></div>
+            <div class="gallery-item"><img src="Gallery/image_5.webp" alt="Dedicated Strength & Mobility Training Zone"></div>
+            <div class="gallery-item"><img src="Gallery/image_6.webp" alt="Clean and Comfortable Recovery Lounge"></div>
+            <div class="gallery-item"><img src="Gallery/image_7.webp" alt="Hygienic Patient Treatment & Care Cabin"></div>
+            <div class="gallery-item"><img src="Gallery/image_8.webp" alt="High-End Rehabilitation Assessment Space"></div>
         </div>
     </div>`,
 

@@ -74,6 +74,9 @@ const App = {
 
         // 13. Load Reviews dynamically
         await loadReviews();
+
+        // 14. Initialize Gallery Lightbox
+        initGalleryLightbox();
     },
 
     /**
@@ -277,4 +280,47 @@ async function loadReviews() {
         console.error('Error loading reviews:', error);
         container.style.display = 'none'; // Hide section if failed
     }
+}
+
+/**
+ * Initializes the Gallery lightbox modal click handlers.
+ */
+function initGalleryLightbox() {
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (!galleryGrid) return;
+
+    const lightbox = document.getElementById('galleryLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('lightboxClose');
+    const galleryItems = galleryGrid.querySelectorAll('.gallery-item');
+
+    if (!lightbox || !lightboxImg || !closeBtn) return;
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            if (!img) return;
+
+            lightboxImg.src = img.src;
+            lightboxCaption.textContent = img.alt || 'Clinic Gallery View';
+            lightbox.classList.add('active');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+        }
+    });
 }
