@@ -34,7 +34,7 @@ const FALLBACK_CONTENT = Object.freeze({
         <div class="content-left">
             <span class="tag">Stroke Rehabilitation Centre</span>
             <h1 class="title">Empowering <span>Recovery.</span><br>Restoring <span>Mobility.</span></h1>
-            <p class="subtitle">ProCare Physiotherapy & Rehabilitation Centre is dedicated to restoring your mobility, strength, and quality of life through personalized care.</p>
+            <p class="subtitle">Recover stronger and live independently with specialized stroke rehabilitation programs led by <strong>Dr. U. Senthil Rajan (PT)</strong>, who brings over 18 years of experience in helping stroke survivors regain mobility, function, and confidence. Our personalized physiotherapy and neuro-rehabilitation treatments are designed to maximize recovery and improve quality of life.<br><br><strong>Vision:</strong> "Let's create a society free from paralysis and stroke-related disabilities."</p>
             <div class="cta-group">
                 <button class="btn-primary" data-goto="2">Our Services</button>
                 <button class="btn-secondary" data-goto="4">Book Now <i class="fa-solid fa-arrow-right"></i></button>
