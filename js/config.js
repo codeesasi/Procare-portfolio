@@ -109,9 +109,7 @@ const FALLBACK_CONTENT = Object.freeze({
     </div>`,
 
     gallery: `<div class="slide-content centered">
-        <span class="tag">Our Space</span>
         <h2 class="title centered">Clinic <span>Gallery</span></h2>
-        <p class="subtitle centered">A glimpse inside our modern physiotherapy and rehabilitation centre.</p>
         <div class="gallery-grid">
             <div class="gallery-item"><img src="Gallery/image_1.webp" alt="Spacious Clinical Rehabilitation Space"></div>
             <div class="gallery-item"><img src="Gallery/image_2.webp" alt="Advanced Physiotherapy Treatment Beds"></div>
