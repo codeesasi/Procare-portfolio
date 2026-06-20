@@ -784,3 +784,85 @@ button.direction-btn:hover i {
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
+
+/* Booking Status Card Styles */
+.booking-status-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-sm) 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.booking-status-card .status-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(8, 145, 178, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-primary);
+}
+
+.booking-status-card .status-icon {
+    font-size: 2.25rem;
+    animation: pulseIcon 2s infinite ease-in-out;
+}
+
+.booking-status-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.booking-status-card .status-message {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.booking-status-card .booking-callout {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: var(--bg-tertiary);
+    border: 1px dashed var(--accent-primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.booking-status-card .callout-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.booking-status-card .callout-phone {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.booking-status-card .callout-phone:hover {
+    transform: scale(1.05);
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}

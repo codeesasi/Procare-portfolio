@@ -74,6 +74,9 @@ const App = {
 
         // 13. Load Reviews dynamically
         await loadReviews();
+
+        // 14. Initialize Contact Form submit interceptor
+        initContactForm();
     },
 
     /**
@@ -277,5 +280,41 @@ async function loadReviews() {
         console.error('Error loading reviews:', error);
         container.style.display = 'none'; // Hide section if failed
     }
+}
+
+/**
+ * Initializes the contact form submission handler.
+ * Intercepts submission and shows a message that booking is under development,
+ * with instructions/details to use the mobile number for booking.
+ */
+function initContactForm() {
+    document.addEventListener('submit', (e) => {
+        const form = e.target;
+        if (form && form.id === 'contactForm') {
+            e.preventDefault();
+            
+            const formCard = form.closest('.form-card');
+            if (!formCard) return;
+
+            // Replace the entire form-card content with a beautiful under development message
+            formCard.innerHTML = `
+                <div class="booking-status-card">
+                    <div class="status-icon-container">
+                        <i class="fa-solid fa-screwdriver-wrench status-icon"></i>
+                    </div>
+                    <h4>Booking Under Development</h4>
+                    <p class="status-message">
+                        Our online appointment booking system is currently under development. We are actively working on it to provide you with automated scheduling soon!
+                    </p>
+                    <div class="booking-callout">
+                        <span class="callout-label">Please book via mobile number:</span>
+                        <a href="tel:+919894321019" class="callout-phone">
+                            <i class="fa-solid fa-phone-flip"></i> +91 98943 21019
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+    });
 }
 

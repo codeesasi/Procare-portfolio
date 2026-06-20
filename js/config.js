@@ -135,7 +135,7 @@ const FALLBACK_CONTENT = Object.freeze({
         <div class="content-right">
             <div class="form-card">
                 <h3>Book Appointment</h3>
-                <form>
+                <form id="contactForm">
                     <input type="text" placeholder="Your Name" required>
                     <input type="tel" placeholder="Phone Number" required>
                     <textarea placeholder="Describe your condition..." rows="3"></textarea>
