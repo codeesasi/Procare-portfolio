@@ -1,0 +1,301 @@
+/* =========================================
+   NAVIGATION STYLES
+   ========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: var(--bg-nav);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: background 0.4s, border-color 0.4s;
+}
+
+.navbar-inner {
+    width: 100%;
+    margin: 0;
+    padding: 0 1.5rem;
+    /* Tighter padding for edge-to-edge feel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.4s;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo-img {
+    height: 80px;
+    /* Increased from 48px */
+    width: 90px;
+    /* Increased from 48px */
+    object-fit: cover;
+    border-radius: 10%;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    transition: color 0.4s;
+}
+
+.logo-name {
+    font-family: 'Hind Madurai', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.logo-desc {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.logo:hover .logo-name {
+    color: var(--accent-primary);
+}
+
+.logo:hover .logo-desc {
+    color: var(--text-primary);
+}
+
+/* Hide brand text on mobile for space */
+@media (max-width: 992px) {
+    .logo-name {
+        font-size: 1.1rem;
+    }
+
+    .logo-desc {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-text {
+        display: none;
+    }
+}
+
+/* NAV MENU */
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.nav-item {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--accent-primary);
+}
+
+.nav-item.active {
+    background: var(--accent-primary);
+    color: white;
+}
+
+/* NAV ACTIONS */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/* NAV SOCIAL */
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.nav-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.nav-social a:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+    width: 48px;
+    height: 48px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.theme-toggle:hover i {
+    color: white;
+}
+
+.theme-toggle i {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    transition: all 0.4s;
+    position: absolute;
+}
+
+[data-theme="light"] .theme-toggle #sunIcon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+[data-theme="light"] .theme-toggle #moonIcon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+[data-theme="dark"] .theme-toggle #sunIcon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+[data-theme="dark"] .theme-toggle #moonIcon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* PROGRESS BAR */
+.slide-progress {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--border-color);
+    z-index: 999;
+    transition: background 0.4s;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--accent-gradient);
+    width: 20%;
+    transition: width 0.4s ease;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.hamburger-btn:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.hamburger-btn:hover span {
+    background: white;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger to X animation */
+.hamburger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.hamburger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* MOBILE MENU OVERLAY */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

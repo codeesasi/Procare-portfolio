@@ -1,0 +1,786 @@
+/* =========================================
+   REUSABLE COMPONENT STYLES
+   ========================================= */
+
+/* TYPOGRAPHY */
+.tag {
+    display: inline-block;
+    padding: var(--spacing-xs) 1.25rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-md);
+    transition: all 0.4s;
+}
+
+.title {
+    font-family: 'Hind Madurai', var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+}
+
+#tamil-quote {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+    transition: color 0.4s;
+}
+
+.title span {
+    color: var(--accent-primary);
+}
+
+.title.centered {
+    text-align: center;
+}
+
+.subtitle,
+.text {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6; /* Tighter line height */
+    max-width: 550px;
+    margin-bottom: var(--spacing-md); /* Reduced from lg */
+    transition: color 0.4s;
+}
+
+/* BUTTONS */
+.cta-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: 3rem;
+}
+
+.btn-primary {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--accent-gradient);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px var(--shadow-strong);
+}
+
+.btn-primary.full {
+    width: 100%;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.btn-secondary i {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover i {
+    transform: translateX(5px);
+}
+
+.btn-secondary.btn-glow:hover i {
+    transform: none;
+    color: white;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
+}
+
+/* GLOWING CTA BUTTON - Psychology: Visual hierarchy draws attention */
+.btn-glow {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+    animation: pulse-glow 2s infinite;
+    position: relative;
+}
+
+.btn-glow:hover {
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 131, 143, 0.4);
+}
+
+/* TECH SPLIT BUTTON (Custom User Request) */
+.btn-tech-split {
+    display: flex;
+    align-items: center;
+    background: var(--accent-gradient);
+    padding: 4px;
+    /* Inner padding to frame the circle */
+    padding-right: 24px;
+    /* Space on text side */
+    border-radius: 60px;
+    /* Full Curve / Capsule Structure */
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 10px 20px rgba(8, 145, 178, 0.25);
+    min-height: 60px;
+}
+
+.btn-tech-split:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(8, 145, 178, 0.4);
+}
+
+.btn-tech-split .icon-container {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    font-size: 1.4rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    transition: all 0.3s;
+    animation: bot-vibrate 3s infinite;
+}
+
+.btn-tech-split:hover .icon-container {
+    color: #ff6b35;
+    /* Orange */
+    /* Transform removed to let animation play */
+}
+
+@keyframes bot-vibrate {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    5% {
+        transform: rotate(-12deg);
+    }
+
+    10% {
+        transform: rotate(12deg);
+    }
+
+    15% {
+        transform: rotate(-12deg);
+    }
+
+    20% {
+        transform: rotate(0);
+    }
+}
+
+.btn-tech-split .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 12px;
+    line-height: 1.2;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba(0, 131, 143, 0.4),
+            0 0 20px rgba(0, 131, 143, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 131, 143, 0.6),
+            0 0 40px rgba(0, 131, 143, 0.3);
+    }
+}
+
+/* REASSURANCE MICRO-COPY - Psychology: Reduces friction, removes fear */
+.cta-reassurance {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: -1.5rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.8;
+}
+
+/* BADGES */
+.trust-badges {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+}
+
+.badge {
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    min-width: 100px;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border-color: var(--accent-primary);
+}
+
+.badge strong {
+    display: block;
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+    color: var(--accent-primary);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+    min-height: 2.5rem;
+}
+
+.badge span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* FOUNDER CARD */
+.founder-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.founder-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.founder-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.founder-info h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.founder-info span {
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+
+/* Large Founder Profile (Home Page) */
+.founder-card.large-profile {
+    flex-direction: column;
+    text-align: center;
+    /* Removed card styling */
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.founder-card.large-profile:hover {
+    transform: none;
+}
+
+.founder-card.large-profile .founder-photo {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto var(--spacing-md);
+    border-width: 0;
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+.founder-card.large-profile .founder-info h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.founder-card.large-profile .founder-info span {
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.founder-card.large-profile .quote {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    padding-top: 0;
+    border-top: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* FEATURE LIST */
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.feature {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-gradient);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.feature strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+    transition: color 0.4s;
+}
+
+.feature span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* CARDS */
+.floating-card {
+    position: absolute;
+    background: var(--bg-card);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: float 3s ease-in-out infinite;
+    border: 1px solid var(--border-color);
+    transition: all 0.4s;
+}
+
+.floating-card i {
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+}
+
+.floating-card span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* EXPERIENCE BADGE */
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    background: var(--accent-gradient);
+    color: white;
+    padding: var(--spacing-lg);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px var(--shadow-strong);
+}
+
+.experience-badge .number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+}
+
+.experience-badge .text {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* FORM ELEMENTS */
+.form-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 3rem;
+    transition: all 0.4s;
+}
+
+.form-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--text-primary);
+    transition: color 0.4s;
+}
+
+.form-card input,
+.form-card textarea {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    transition: all 0.3s;
+}
+
+.form-card input::placeholder,
+.form-card textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.form-card input:focus,
+.form-card textarea:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 4px rgba(8, 145, 178, 0.1);
+}
+
+/* FAQ ACCORDION */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: left;
+}
+
+.faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.faq-item.active {
+    border-color: var(--accent-primary);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    background: none;
+    border: none;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--accent-primary);
+}
+
+.faq-question i {
+    font-size: 0.9rem;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+    color: var(--accent-primary);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-answer p {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+/* ABOUT PAGE VALUES GRID */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.value-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-strong);
+    border-color: var(--accent-primary);
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-md);
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    transition: all 0.3s;
+}
+
+.value-card:hover .value-icon {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.value-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.value-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* RESPONSIVE VALUES GRID */
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+
+
+/* =========================================
+   DIRECTION BUTTON & MAP MODAL
+   ========================================= */
+
+/* Direction Button with Static Orange Border */
+button.direction-btn {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    border-radius: var(--radius-sm) !important;
+    /* Changed from 50% to match other icons */
+    background: var(--bg-tertiary) !important;
+    /* Match other icons background */
+    color: #ff6b35 !important;
+    border: none !important;
+    /* Remove border to match other icons */
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    transition: all 0.3s !important;
+    flex-shrink: 0 !important;
+    margin-left: -4px !important;
+    /* Move slight left */
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    /* Reset margins as gap handles spacing */
+    padding: 0 !important;
+    /* Vertical centering in flex container */
+    animation: pulseGlow 5s ease-in-out infinite;
+    /* Eye-catching animation */
+}
+
+button.direction-btn i {
+    color: #ff6b35 !important;
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 1.1rem !important;
+}
+
+button.direction-btn:hover {
+    transform: translateY(-5px) !important;
+    /* Match other icons hover bg */
+    box-shadow: 0 10px 30px var(--shadow-color) !important;
+    animation: none;
+    /* Stop pulse on hover */
+}
+
+button.direction-btn:hover i {
+    color: white !important;
+    /* Icon becomes white on hover */
+}
+
+/* Map Modal Overlay */
+.map-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.map-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Map Modal Content */
+.map-modal-content {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    width: 90%;
+    max-width: 700px;
+    /* Increased from 500px */
+    padding: 1.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.map-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.map-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.map-modal-header h3 i {
+    color: var(--accent-primary);
+}
+
+.map-close-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.map-close-btn:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
+.map-container {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}

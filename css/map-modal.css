@@ -1,0 +1,163 @@
+/**
+ * @fileoverview Map Modal Component Styles
+ * @author ProCare Development Team
+ */
+
+
+/* Map Modal Overlay */
+.map-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.map-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* =========================================
+   DIRECTION BUTTON & MAP MODAL
+   ========================================= */
+
+/* Direction Button with Static Orange Border */
+button.direction-btn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 50% !important;
+    background: white !important;
+    color: #ff6b35 !important;
+    border: 3px solid #ff6b35 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    transition: all 0.3s !important;
+    flex-shrink: 0 !important;
+    margin-left: 1rem !important;
+    padding: 0 !important;
+    align-self: center !important;
+    /* Vertical centering in flex container */
+    animation: pulseGlow 2s ease-in-out infinite;
+    /* Eye-catching animation */
+}
+
+/* Pulsing Glow Animation */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7),
+            0 0 20px rgba(255, 107, 53, 0.3);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 53, 0),
+            0 0 30px rgba(255, 107, 53, 0.5);
+        transform: scale(1.05);
+    }
+}
+
+button.direction-btn i {
+    color: #ff6b35 !important;
+    background: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 1.1rem !important;
+}
+
+button.direction-btn:hover {
+    transform: scale(1.15) !important;
+    border-color: #f7931e !important;
+    animation: none;
+    /* Stop pulse on hover */
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.6) !important;
+}
+
+button.direction-btn:hover i {
+    color: #f7931e !important;
+}
+
+/* Map Modal Content */
+.map-modal-content {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    width: 90%;
+    max-width: 1100px;
+    /* Increased from 900px */
+    padding: 1.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.map-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.map-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.map-modal-header h3 i {
+    color: var(--accent-primary);
+}
+
+.map-close-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.map-close-btn:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
+.map-container {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}

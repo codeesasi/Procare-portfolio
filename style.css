@@ -1,0 +1,28 @@
+/* =========================================
+   MAIN STYLESHEET - IMPORTS ALL MODULES
+   V7 PREMIUM - MODULAR ARCHITECTURE
+   ========================================= */
+
+/* 1. Design Tokens & Variables */
+@import url('css/variables.css');
+
+/* 2. Reset & Base Styles */
+@import url('css/base.css');
+
+/* 3. Navigation */
+@import url('css/navigation.css');
+
+/* 4. Reusable Components */
+@import url('css/components.css');
+
+/* 5. Section Layouts */
+@import url('css/sections.css');
+
+/* 6. Modal Popup */
+@import url('css/modal.css');
+
+/* 7. Utilities & Responsive */
+@import url('css/utilities.css');
+
+/* 8. Chatbot Component */
+@import url('css/chatbot.css');

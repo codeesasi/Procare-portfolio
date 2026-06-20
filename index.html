@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProCare PRC | Professional Medical Experience</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="ProCare Physiotherapy & Rehabilitation Centre is dedicated to restoring your mobility, strength, and quality of life through personalized care.">
+    <meta name="keywords" content="physiotherapy, rehabilitation centre, mobility, stroke recovery, physical therapy">
+    <link rel="canonical" href="https://procareprc.com/">
+
+    <!-- Open Graph (OG) / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ProCare PRC | Professional Medical Experience">
+    <meta property="og:description"
+        content="Dedicated to restoring your mobility, strength, and quality of life through personalized care.">
+    <meta property="og:image" content="https://procareprc.com/images/sendhil.png">
+    <!-- Verify with a real absolute URL if deployed -->
+    <meta property="og:url" content="https://procareprc.com/">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ProCare PRC | Expertise in Physiotherapy">
+    <meta name="twitter:description"
+        content="Restoring mobility and empowering recovery through professional physiotherapy services.">
+    <meta name="twitter:image" content="https://procareprc.com/images/sendhil.png">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Main Stylesheet (imports all CSS modules) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Map Modal Component CSS -->
+    <link rel="stylesheet" href="css/map-modal.css">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+
+    <!-- FIXED TOP NAVIGATION -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="logo">
+                <img src="logo/Procare-logo-removebg.png" alt="ProCare PRC Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">Procare</span>
+                    <span class="logo-desc">Physiotherapy & Rehabilitation Centre</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item active" data-index="0" data-page="home"><a href="#home">Home</a></li>
+                <li class="nav-item" data-index="1" data-page="about"><a href="#about">About</a></li>
+                <li class="nav-item" data-index="2" data-page="services"><a href="#services">Services</a></li>
+                <li class="nav-item" data-index="3" data-page="team"><a href="#team">Team</a></li>
+                <li class="nav-item" data-index="4" data-page="contact"><a href="#contact">Contact</a></li>
+                <li class="nav-item" data-index="5" data-page="faq"><a href="#faq">FAQ</a></li>
+                <li class="nav-item" data-index="6" data-page="products"><a href="#products">Products</a></li>
+
+            </ul>
+            <div class="nav-actions">
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun" id="sunIcon"></i>
+                    <i class="fa-solid fa-moon" id="moonIcon"></i>
+                </button>
+                <div class="nav-social">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i
+                            class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SLIDE PROGRESS INDICATOR -->
+    <div class="slide-progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- MAP MODAL COMPONENT -->
+    <div data-include="components/map-modal"></div>
+
+    <main>
+        <!-- MAIN SWIPER -->
+        <div class="swiper main-swiper" id="mainSwiper">
+            <div class="swiper-wrapper" id="swiperWrapper">
+                <div class="swiper-slide slide-home" id="home" data-page="home"></div>
+                <div class="swiper-slide slide-about" id="about" data-page="about"></div>
+                <div class="swiper-slide slide-services" id="services" data-page="services"></div>
+                <div class="swiper-slide slide-team" id="team" data-page="team"></div>
+                <div class="swiper-slide slide-contact" id="contact" data-page="contact"></div>
+                <div class="swiper-slide slide-faq" id="faq" data-page="faq"></div>
+                <div class="swiper-slide slide-products" id="products" data-page="products"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ========================================= -->
+    <!-- EXTERNAL LIBRARIES -->
+    <!-- ========================================= -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ========================================= -->
+    <!-- MODULAR JAVASCRIPT (Load Order Matters!) -->
+    <!-- ========================================= -->
+    <!-- 1. Configuration & Fallback Content -->
+    <script src="js/config.js"></script>
+
+    <!-- 2. Theme Management -->
+    <script src="js/theme.js"></script>
+
+
+
+    <!-- 4. Navigation & Swiper -->
+    <script src="js/navigation.js"></script>
+
+    <!-- 4. Typewriter Effect -->
+    <script src="js/typewriter.js"></script>
+
+    <!-- 5. GSAP Animations -->
+    <script src="js/animations.js"></script>
+
+    <!-- 6. Products specific logic -->
+    <script src="js/products.js"></script>
+
+    <!-- 7. Page Content Loader (Handles async dynamic HTML) -->
+    <script src="js/loader.js"></script>
+
+    <!-- 8. Counter Animations -->
+    <script src="js/counter.js"></script>
+
+    <!-- 9. Modal Popup -->
+    <script src="js/modal.js"></script>
+
+    <!-- 10. Map Modal Component -->
+    <script src="js/map-modal.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/reviews.js"></script>
+
+    <!-- 9. Main Application Entry Point -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<div class="slide-content centered products-slide-wrapper">
+    <div class="products-header">
+        <h2 class="title" align="left">Our <span>Products</span></h2>
+        <div class="cart-toggle" onclick="toggleCart()">
+            <div class="cart-icon-container">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="cart-badge">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-container" id="products-grid">
+        <!-- Product Cards injected by JS -->
+    </div>
+
+    <!-- Pagination Controls -->
+    <div class="pagination-controls" id="pagination-controls"></div>
+
+    <!-- ===========================
+         Product Detail Modal
+         =========================== -->
+    <div class="product-detail-modal" id="product-detail-modal">
+        <div class="pdm-overlay" onclick="closeProductDetail()"></div>
+        <div class="pdm-content">
+            <button class="pdm-close" onclick="closeProductDetail()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="pdm-image-section">
+                <img class="pdm-image" src="" alt="">
+                <span class="pdm-category tag"></span>
+            </div>
+            <div class="pdm-info">
+                <h2 class="pdm-name"></h2>
+                <p class="pdm-desc"></p>
+                <div class="pdm-footer">
+                    <span class="pdm-price"></span>
+                    <button class="pdm-add-btn btn-primary">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart-btn" onclick="toggleCart()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-items-container" id="cart-items">
+            <!-- Cart Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <span>Subtotal:</span>
+                <strong id="cart-total">₹0.00</strong>
+            </div>
+            <button class="btn-primary full checkout-btn" onclick="checkout()">
+                <i class="fa-solid fa-lock" style="margin-right: 8px;"></i> Checkout Securely
+            </button>
+            <p class="cart-disclaimer">Free delivery on orders above ₹1000</p>
+        </div>
+    </div>
+</div>

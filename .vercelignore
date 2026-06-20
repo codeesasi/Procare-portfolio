@@ -1,0 +1,22 @@
+# Vercel ignore file for ProCare PRC
+# Exclude dev/server files from deployment
+
+# Python backend (separate project)
+../ProCarAPi/
+
+# Environment files (never deploy secrets)
+.env
+.env.*
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

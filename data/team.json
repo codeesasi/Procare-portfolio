@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Dr. Muruga Venkatesh",
+        "role": "Medical Officer",
+        "image": "muruga.webp",
+        "isLeader": true
+    },
+    {
+        "name": "Mrs. Nandhini. C",
+        "role": "Staff Nurse",
+        "image": "nandhini.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Mr. Balamanikandan",
+        "role": "Physiotherapist",
+        "image": "balamanikandan.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Ms. Brindha",
+        "role": "Physiotherapist",
+        "image": "brindha.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Mr. Ganesh",
+        "role": "Physiotherapist",
+        "image": "ganesh.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Ms. Niraimathi",
+        "role": "Physiotherapist",
+        "image": "niraimathi.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Mr. Sadhasivam",
+        "role": "Physiotherapist",
+        "image": "sadhasivam.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Ms. Salini",
+        "role": "Physiotherapist",
+        "image": "salini.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Ms. Supreetha",
+        "role": "Physiotherapist",
+        "image": "supreetha-1.webp",
+        "isLeader": false
+    },
+    {
+        "name": "Ms. Supriya",
+        "role": "Physiotherapist",
+        "image": "supriya-2.webp",
+        "isLeader": false
+    }
+]

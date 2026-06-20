@@ -1,0 +1,326 @@
+/* =========================================
+   UTILITIES & RESPONSIVE
+   ========================================= */
+
+
+
+/* RESPONSIVE - LARGE SCREENS */
+@media (min-width: 1440px) {
+    .slide-content {
+        max-width: 1800px;
+        gap: var(--spacing-xl);
+    }
+
+    .title {
+        font-size: clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .services-grid {
+        max-width: 1100px;
+        gap: var(--spacing-md);
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .team-card {
+        max-width: 350px;
+    }
+}
+
+/* RESPONSIVE - TABLET */
+@media (max-width: 1024px) {
+    .slide-content {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-lg);
+    }
+
+    .content-right {
+        order: 2;
+        width: 100%;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .home-reviews-section {
+        width: 100%;
+        height: 400px;
+    }
+
+    .hero-image-wrapper {
+        height: 300px;
+        margin-top: var(--spacing-md);
+    }
+
+    .about-image-stack {
+        height: 300px;
+        margin-top: var(--spacing-md);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-inner {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .trust-badges {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+
+    /* Hide cursor on touch devices */
+
+
+    body {
+        cursor: auto;
+    }
+
+    a,
+    button {
+        cursor: pointer;
+    }
+}
+
+/* RESPONSIVE - TABLET SMALL */
+@media (max-width: 900px) {
+    .team-card {
+        flex: 0 1 calc(50% - var(--spacing-md));
+    }
+
+    .badge {
+        min-width: 80px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .badge strong {
+        font-size: 2rem;
+    }
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+
+    /* Enable scrolling on mobile */
+    html,
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: auto;
+    }
+
+    /* Show hamburger button */
+    .hamburger-btn {
+        display: flex;
+    }
+
+    /* Hide desktop nav elements */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: calc(var(--nav-height) + 2rem) var(--spacing-lg) var(--spacing-lg);
+        gap: var(--spacing-xs);
+        z-index: 999;
+        box-shadow: -10px 0 30px var(--shadow-color);
+        transition: right 0.3s ease;
+        border-left: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: var(--radius-sm);
+        background: var(--bg-tertiary);
+        text-align: center;
+    }
+
+    .nav-item.active {
+        background: var(--accent-primary);
+    }
+
+    .nav-phone {
+        display: none;
+    }
+
+    .mobile-menu-overlay {
+        display: block;
+    }
+
+    /* Main swiper and content adjustments */
+    .main-swiper {
+        height: auto;
+        min-height: calc(100vh - var(--nav-height) - 3px);
+    }
+
+    .swiper-slide {
+        height: auto !important;
+        min-height: calc(100vh - var(--nav-height) - 3px);
+        overflow: visible;
+    }
+
+    .slide-content {
+        height: auto;
+        min-height: auto;
+        padding: var(--spacing-sm);
+        padding-bottom: var(--spacing-lg);
+    }
+
+    .home-reviews-section {
+        position: relative;
+        padding: 0;
+        height: 300px;
+    }
+
+    .slide-content.centered {
+        justify-content: flex-start;
+        padding-top: var(--spacing-sm);
+        gap: var(--spacing-xs);
+    }
+
+    /* Reduce gaps for services and team */
+    .services-grid {
+        margin-top: var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+
+    .team-grid {
+        margin-top: var(--spacing-sm);
+    }
+
+    /* Typography - reduce gaps */
+    .tag {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .title {
+        font-size: 1.75rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Trust badges */
+    .trust-badges {
+        gap: var(--spacing-xs);
+    }
+
+    .badge {
+        flex: 1 1 calc(33% - var(--spacing-xs));
+        min-width: 70px;
+        padding: var(--spacing-xs);
+    }
+
+    .badge strong {
+        font-size: 1.5rem;
+        min-height: 1.5rem;
+    }
+
+    .badge span {
+        font-size: 0.7rem;
+    }
+
+    /* Team */
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .team-img {
+        height: 200px;
+    }
+
+    /* CTA buttons */
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Modal mobile adjustments */
+    .modal-container {
+        width: 95%;
+        max-height: 90vh;
+        margin: var(--spacing-sm);
+    }
+
+    .modal-header {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .modal-body {
+        padding: 1rem 1.5rem;
+    }
+
+    .modal-footer {
+        padding: 1rem 1.5rem 1.5rem;
+    }
+
+    .modal-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .modal-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* RESPONSIVE - SMALL MOBILE */
+@media (max-width: 375px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 0.35rem 1rem;
+    }
+
+    .navbar-inner {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .badge {
+        min-width: 60px;
+    }
+}

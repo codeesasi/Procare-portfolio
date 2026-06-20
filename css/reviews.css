@@ -1,0 +1,161 @@
+/* REVIEWS SECTION LAYOUT */
+.reviews-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vh;
+    /* Reduced gap between title and slider */
+    padding: 2vh 2rem;
+    overflow: hidden;
+}
+
+/* CENTER HEADER */
+.reviews-header {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 10;
+}
+
+.reviews-header .tag {
+    background: rgba(8, 145, 178, 0.1);
+    color: var(--accent-primary);
+    border: none;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.reviews-header h2 {
+    font-size: 2.8rem;
+    /* Slightly smaller title */
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+
+/* SLIDERS CONTAINER */
+.reviews-slider-container {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2vh;
+    /* Gap between the two rows */
+    margin-top: 1vh;
+}
+
+/* REVIEWS SWIPER STYLES (scoped to avoid overriding main Swiper) */
+.reviews-section .swiper {
+    width: 100%;
+    height: auto;
+    overflow: visible !important;
+    /* Show shadows */
+    padding: 1rem 0;
+    /* Space for shadows */
+}
+
+.reviews-section .swiper-slide {
+    height: auto;
+    display: flex;
+    /* Cards are smaller, so width handles itself via slidesPerView */
+}
+
+/* COMPACT REVIEW CARD */
+.review-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    /* Reduced padding */
+    border-radius: 16px;
+    /* Slightly smaller radius */
+    border-bottom-right-radius: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    position: relative;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent-primary);
+}
+
+/* COMPACT USER INFO */
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.user-photo {
+    width: 40px;
+    /* Smaller photo */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    /* Smaller name */
+    color: var(--text-primary);
+}
+
+/* COMPACT TEXT */
+.review-text {
+    font-size: 0.9rem;
+    /* Smaller text */
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0;
+    /* No bottom margin needed */
+}
+
+/* REMOVED QUOTE ICON TO SAVE SPACE */
+.quote-icon {
+    display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .reviews-header h2 {
+        font-size: 2rem;
+    }
+
+    .reviews-section {
+        padding: 1rem;
+        gap: 1rem;
+        height: auto;
+        overflow: visible;
+    }
+
+    .reviews-slider-container {
+        margin-top: 0.5rem;
+    }
+
+    .review-card {
+        padding: 1rem;
+    }
+
+    .review-text {
+        font-size: 0.85rem;
+    }
+}

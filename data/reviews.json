@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Arun Kumar",
+        "rating": 5,
+        "text": "Excellent care! Dr. Senthilrajan's expertise in stroke rehabilitation helped my father regain mobility faster than we expected."
+    },
+    {
+        "name": "Priya Ramesh",
+        "rating": 5,
+        "text": "The personalized attention and modern equipment here are improved my recovery journey significantly. Highly recommend!"
+    },
+    {
+        "name": "Karthik S.",
+        "rating": 5,
+        "text": "Professional, compassionate, and result-oriented. The best physiotherapy center in the city for post-surgery rehab."
+    },
+    {
+        "name": "Meera Krishnan",
+        "rating": 4,
+        "text": "Very supportive staff and a clean environment. The therapy sessions are well-structured and effective."
+    },
+    {
+        "name": "Rajesh T.",
+        "rating": 5,
+        "text": "I came for back pain treatment, and the relief was immediate after a few sessions. Thank you, ProCare!"
+    }
+]
