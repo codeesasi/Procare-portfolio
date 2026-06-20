@@ -26,6 +26,8 @@
 
     --cursor-color: #0891b2;
     --home-overlay: rgba(255, 255, 255, 0.05);
+    --bg-glass: rgba(255, 255, 255, 0.72);
+    --border-glass: rgba(255, 255, 255, 0.4);
 
     /* --- Alias tokens (used by products.css) --- */
     --primary-color:    #0891b2;
@@ -73,6 +75,8 @@
 
     --cursor-color: #22d3ee;
     --home-overlay: rgba(15, 23, 42, 0.1);
+    --bg-glass: rgba(15, 23, 42, 0.72);
+    --border-glass: rgba(255, 255, 255, 0.08);
 
     /* --- Alias tokens (dark overrides) --- */
     --primary-color:    #22d3ee;
