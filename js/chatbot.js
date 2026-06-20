@@ -94,7 +94,7 @@ const Chatbot = {
                             <i class="fa-solid fa-robot"></i>
                         </div>
                         <div class="chat-bubble">
-                            Hi there! 👋<br>How can I help you with your recovery today?
+                            Hi there! 👋<br>We are currently working on this feature to bring you automated booking and support. Stay tuned!
                         </div>
                     </li>
                 </ul>
@@ -321,26 +321,19 @@ const Chatbot = {
         this.textarea.value = '';
         this.textarea.style.height = 'auto';
 
-        // Check for Booking Trigger
-        if (userMessage.toLowerCase().includes('book') || userMessage.toLowerCase().includes('appointment')) {
-            setTimeout(() => {
-                this.handleBookingFlow();
-            }, 600);
-            return;
-        }
-
-        // Call Lambda Backend
+        // Call typing indicator
         const typingMsg = this.showTypingIndicator();
 
-        this.sendMessageToLambda(userMessage)
-            .then(reply => {
-                typingMsg.remove();
-                this.addMessage(reply, 'incoming');
-            })
-            .catch(error => {
-                typingMsg.remove();
-                this.addMessage("I'm having trouble connecting right now. Please try again later.", 'incoming');
-            });
+        setTimeout(() => {
+            typingMsg.remove();
+            
+            // Check for Booking Trigger
+            if (userMessage.toLowerCase().includes('book') || userMessage.toLowerCase().includes('appointment')) {
+                this.addMessage("We are currently working on our online booking assistant! In the meantime, you can book an appointment by giving us a call at <strong>+91 98943 21019</strong> or using the contact form in our Contact slide.", 'incoming');
+            } else {
+                this.addMessage("ProCare Assistant is currently under development. We are actively working on it to provide you with automated clinical guidance and instant support soon!", 'incoming');
+            }
+        }, 800);
     },
 
     handleBookingFlow() {
