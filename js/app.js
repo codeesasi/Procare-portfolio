@@ -31,9 +31,6 @@ const App = {
         // 1. Load page content first
         await loadAllPages();
 
-        // 1.5 Initialize home page background image slider
-        initHomeBgSlider();
-
         // 2. Initialize theme toggle
         initTheme();
 
@@ -280,30 +277,4 @@ async function loadReviews() {
         console.error('Error loading reviews:', error);
         container.style.display = 'none'; // Hide section if failed
     }
-}
-
-/**
- * Initializes the background image slider on the home page.
- * Rotates background images from the Gallery folder with crossfades.
- */
-function initHomeBgSlider() {
-    const sliderContainer = document.querySelector('.home-bg-slider');
-    if (!sliderContainer) return;
-
-    const slides = sliderContainer.querySelectorAll('.home-bg-slide');
-    if (slides.length <= 1) return;
-
-    let currentIndex = 0;
-    const intervalTime = 6000; // Change image every 6 seconds for a slow, premium pace
-
-    setInterval(() => {
-        // Remove active class from current slide
-        slides[currentIndex].classList.remove('active');
-
-        // Increment index
-        currentIndex = (currentIndex + 1) % slides.length;
-
-        // Add active class to new slide
-        slides[currentIndex].classList.add('active');
-    }, intervalTime);
 }
