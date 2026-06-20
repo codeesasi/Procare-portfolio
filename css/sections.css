@@ -1063,7 +1063,7 @@
    ========================================= */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
@@ -1091,7 +1091,6 @@
     aspect-ratio: 4 / 3;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     background-color: var(--bg-card);
-    cursor: pointer;
 }
 
 .gallery-item img {
@@ -1101,99 +1100,7 @@
     transition: transform 0.4s ease;
 }
 
-.gallery-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(8, 145, 178, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-}
-
-.gallery-hover i {
-    color: white;
-    font-size: 2rem;
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
-}
-
 .gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-item:hover .gallery-hover {
-    opacity: 1;
-}
-
-.gallery-item:hover .gallery-hover i {
-    transform: scale(1);
-}
-
-/* Lightbox Modal styles */
-.gallery-lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-    background-color: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(8px);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.gallery-lightbox.active {
-    display: flex;
-}
-
-.lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 85%;
-    max-height: 75vh;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-}
-
-.gallery-lightbox.active .lightbox-content {
-    transform: scale(1);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    color: #f1f5f9;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.lightbox-close:hover {
-    color: var(--accent-primary);
-    transform: scale(1.1);
-}
-
-.lightbox-caption {
-    margin: 15px auto;
-    text-align: center;
-    color: #cbd5e1;
-    font-size: 1.1rem;
-    font-weight: 500;
-    max-width: 80%;
+    transform: scale(1.05);
 }
 
