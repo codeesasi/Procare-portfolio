@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "procare-prc",
   "buildCommand": null,
   "outputDirectory": ".",
   "routes": [
